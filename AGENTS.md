@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Keep dormitory state in a shared browser-storage provider and pure calculation module; this prevents cross-page drift and makes financial rules testable without a server.
+- Store monetary amounts as integer satang and invoice readings keyed by month; this avoids decimal errors and preserves previous-meter history.
+- Import PNG and spreadsheet libraries only in browser event handlers; these exports need no server and do not burden the initial page.
+- Capture invoices in a script-free iframe with computed styles converted to RGB; html2canvas otherwise stalls on app resources and cannot parse OKLCH.
